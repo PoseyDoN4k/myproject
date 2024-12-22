@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 600px; /* Установлена ширина экрана игры */
+    height: 100vh;
+    margin: 0 auto; /* Центрирование по горизонтали */
+    border: 3px solid #5c5cff; /* Голубая обводка */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1b1b1b, #2f2f2f); /* Темный градиент */
+    color: #e8e8e8; /* Светлый текст */
+    overflow: hidden; /* Убираем скроллинг */
+}
+
+.factionSelection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.factions {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.faction {
+    background: linear-gradient(145deg, #4a4a8a, #2e2e6d); /* Новый градиент */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(92, 92, 255, 0.5); /* Обновленные тени */
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.faction:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(157, 175, 255, 0.6); /* Эффект при наведении */
+}
+
+.faction h2 {
+    color: #9dafff; /* Светлый синий */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 5px #9dafff;
+}
+
+.faction p {
+    color: #e8e8e8;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.faction button {
+    background: linear-gradient(145deg, #6a6ab5, #494984); /* Новый градиент кнопки */
+    color: white;
+    font-size: 1em;
+    border: 2px solid #9dafff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(92, 92, 255, 0.4);
+}
+
+.faction button:hover {
+    background: linear-gradient(145deg, #494984, #6a6ab5);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(157, 175, 255, 0.6);
+}
+
+.factionSelection h1 {
+    color: #9dafff;
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 10px #9dafff;
+}
+
+@media (max-width: 768px) {
+    .factions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .faction {
+        min-width: unset;
+    }
+
+    .faction h2 {
+        font-size: 1.2em;
+    }
+
+    .faction p {
+        font-size: 0.9em;
+    }
+
+    .faction button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+
+    .factionSelection h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 500px) {
+    .factions {
+        gap: 10px;
+    }
+
+    .faction h2 {
+        font-size: 1em;
+    }
+
+    .faction p {
+        font-size: 0.8em;
+    }
+
+    .faction button {
+        font-size: 0.8em;
+        padding: 7px 10px;
+    }
+
+    .factionSelection h1 {
+        font-size: 1.2em;
+    }
+
+    body {
+        width: 100vw;
+    }
+}

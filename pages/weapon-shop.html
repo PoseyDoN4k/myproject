@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Категории Оружия</title>
+    <link rel="stylesheet" href="../styles/locations/weaponCategories.css">
+</head>
+<body>
+    <header class="gameHeader">
+        <div class="resourceBar">
+            <span>Золото: <span id="gold">100</span></span>
+            <span>Энергия: <span id="energy">50</span></span>
+        </div>
+        <button class="backToMain" onclick="window.location.href='./mainGame.html'">Назад в главное меню</button>
+    </header>
+
+    <main class="weaponCategories">
+        <h1>Категории Оружия</h1>
+        <p>Выберите категорию оружия для просмотра доступных предметов.</p>
+
+        <div class="categoryButtons">
+            <button onclick="window.location.href='./commonWeapons.html'">Обычная Экипировка</button>
+            <button onclick="window.location.href='./rareWeapons.html'">Редкая Экипировка</button>
+            <button onclick="window.location.href='./epicWeapons.html'">Эпическая Экипировка</button>
+            <button onclick="window.location.href='./legendaryWeapons.html'">Легендарная Экипировка</button>
+            <button onclick="window.location.href='./mythicWeapons.html'">Мифическая Экипировка</button>
+        </div>
+        
+    </main>
+
+    <script src="../scripts/weaponCategories.js"></script>
+</body>
+</html>

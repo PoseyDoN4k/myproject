@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Боевая Зона</title>
+    <link rel="stylesheet" href="../styles/locations/battleZone.css">
+</head>
+<body>
+    <header class="gameHeader">
+        <div class="resourceBar">
+            <span>Золото: <span id="gold">100</span></span>
+            <span>Энергия: <span id="energy">50</span></span>
+        </div>
+    </header>
+
+    <main class="battleZone">
+        <h1 id="currentQuest">Текущее задание</h1>
+        
+        <!-- Секция для параметров игрока -->
+        <section class="playerStats">
+            <h2>Ваши параметры</h2>
+            <p>Здоровье: <span id="playerHealthDisplay">100</span></p>
+            <p>Атака: <span id="playerAttackDisplay">20</span></p>
+            <p>Защита: <span id="playerDefenseDisplay">10</span></p>
+        </section>
+
+        <section class="battle">
+            <div class="enemy">
+                <h2 id="enemyName">Враг: Оборотень</h2>
+                <p>Здоровье: <span id="enemyHealth">100</span></p>
+            </div>
+
+            <div class="playerActions">
+                <button id="attackButton">Атаковать</button>
+                <button id="defendButton">Защититься</button>
+                <button id="fleeButton">Бежать</button>
+            </div>
+        </section>
+
+        <section class="battleLog">
+            <h2>Лог битвы</h2>
+            <div id="logContainer"></div>
+        </section>
+    </main>
+
+
+    <script src="../scripts/battleZone.js"></script>
+</body>
+</html>

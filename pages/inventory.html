@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инвентарь</title>
+    <link rel="stylesheet" href="../styles/locations/inventory.css">
+</head>
+<body>
+    <header class="gameHeader">
+        <div class="resourceBar">
+            <span>Золото: <span id="gold">100</span></span>
+            <span>Энергия: <span id="energy">50</span></span>
+        </div>
+        <button class="backToMain" onclick="window.location.href='./mainGame.html'">Назад в главное меню</button>
+    </header>
+
+    <main class="inventory">
+        <h1>Ваш Инвентарь</h1>
+
+        <section class="inventorySections">
+            <!-- Раздел оружия -->
+            <div class="inventorySection" id="weapons">
+                <h2>Оружие</h2>
+                <div class="itemList">
+                    <div class="item" id="weapon1">
+                        <p>Меч Разрушителя</p>
+                        <button onclick="equipItem('weapon1')">Экипировать</button>
+                        <button onclick="sellItem('weapon1')">Продать</button>
+                    </div>
+                    <!-- Дополнительные предметы -->
+                </div>
+            </div>
+
+            <!-- Раздел брони -->
+            <div class="inventorySection" id="armor">
+                <h2>Броня</h2>
+                <div class="itemList">
+                    <div class="item" id="armor1">
+                        <p>Щит Защитника</p>
+                        <button onclick="equipItem('armor1')">Экипировать</button>
+                        <button onclick="sellItem('armor1')">Продать</button>
+                    </div>
+                    <!-- Дополнительные предметы -->
+                </div>
+            </div>
+
+            <!-- Раздел артефактов -->
+            <div class="inventorySection" id="artifacts">
+                <h2>Артефакты</h2>
+                <div class="itemList">
+                    <div class="item" id="artifact1">
+                        <p>Древний Артефакт</p>
+                        <button onclick="useItem('artifact1')">Использовать</button>
+                        <button onclick="sellItem('artifact1')">Продать</button>
+                    </div>
+                    <!-- Дополнительные предметы -->
+                </div>
+            </div>
+
+            <!-- Раздел зелий -->
+            <div class="inventorySection" id="potions">
+                <h2>Зелья</h2>
+                <div class="itemList">
+                    <div class="item" id="potion1">
+                        <p>Зелье восстановления</p>
+                        <button onclick="useItem('potion1')">Использовать</button>
+                        <button onclick="sellItem('potion1')">Продать</button>
+                    </div>
+                    <!-- Дополнительные предметы -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../scripts/inventory.js"></script>
+</body>
+</html>
+

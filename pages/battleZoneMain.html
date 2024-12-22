@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Защита территории</title>
+    <link rel="stylesheet" href="../styles/locations/territoryDefense.css">
+</head>
+<body>
+    <header class="gameHeader">
+        <div class="resourceBar">
+            <span>Золото: <span id="gold">100</span></span>
+            <span>Энергия: <span id="energy">50</span></span>
+        </div>
+        <button class="backToMain" onclick="window.location.href='./questsMain.html'">Назад к заданиям</button>
+    </header>
+
+    <main class="territoryDefense">
+        <h1>Защита территории</h1>
+
+        <section class="missionDetails">
+            <h2>Описание миссии</h2>
+            <p>Вы получили задачу защитить границы вашей фракции от волн врагов. Используйте свои умения и снаряжение, чтобы предотвратить прорыв противников.</p>
+        </section>
+
+        <section class="enemyWaves">
+            <h2>Волны врагов</h2>
+            <ul>
+                <li>Первая волна: Маленькие враги, 5 шт.</li>
+                <li>Вторая волна: Средние враги, 3 шт.</li>
+                <li>Третья волна: Большой босс.</li>
+            </ul>
+        </section>
+
+        <section class="rewards">
+            <h2>Награда</h2>
+            <ul>
+                <li>Золото: <strong>50</strong></li>
+                <li>Опыт: <strong>10</strong></li>
+            </ul>
+        </section>
+
+        <button class="startMission" onclick="startMission()">Начать миссию</button>
+    </main>
+
+    <script src="../scripts/territoryDefense.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+/* Основные стили для страницы "Обычное оружие" */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #1b1b1b, #2f2f2f);
+    color: #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.gameHeader {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(145deg, #4a4a4a, #2e2e2e);
+    box-shadow: 0 6px 15px rgba(92, 92, 92, 0.4);
+    color: white;
+    font-size: 1em;
+}
+
+.resourceBar span {
+    margin-right: 20px;
+}
+
+.backToCategories {
+    background: linear-gradient(145deg, #6e6e6e, #4a4a4a);
+    color: white;
+    font-size: 1em;
+    border: 2px solid #a9a9a9;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(92, 92, 92, 0.4);
+}
+
+.backToCategories:hover {
+    background: linear-gradient(145deg, #4a4a4a, #6e6e6e);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(169, 169, 169, 0.6);
+}
+
+.commonWeapons {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #2e2e2e, #4a4a4a);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(92, 92, 92, 0.5);
+    text-align: center;
+}
+
+.commonWeapons h1 {
+    font-size: 2em;
+    color: #c0c0c0;
+    margin-bottom: 20px;
+}
+
+.equipmentSet {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: linear-gradient(145deg, #3a3a3a, #2e2e2e);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(92, 92, 92, 0.4);
+    text-align: left;
+}
+
+.equipmentSet h2 {
+    font-size: 1.5em;
+    color: #c0c0c0;
+    margin-bottom: 10px;
+}
+
+.equipmentSet p {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #a9a9a9;
+}
+
+.equipmentItems {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.equipmentItems li {
+    margin: 10px 0;
+    padding: 10px;
+    background: #3a3a3a;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(92, 92, 92, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.equipmentItems li strong {
+    font-size: 1em;
+    color: #d3d3d3;
+}
+
+.equipmentItems li p {
+    font-size: 0.9em;
+    color: #b0b0b0;
+    margin: 0;
+}
+
+.equipmentItems li button {
+    background: linear-gradient(145deg, #6e6e6e, #4a4a4a);
+    color: white;
+    font-size: 0.9em;
+    border: 2px solid #a9a9a9;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(92, 92, 92, 0.4);
+}
+
+.equipmentItems li button:hover {
+    background: linear-gradient(145deg, #4a4a4a, #6e6e6e);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(169, 169, 169, 0.6);
+}
+
+.shopMessage {
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(145deg, #2e2e2e, #4a4a4a);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(92, 92, 92, 0.5);
+    text-align: center;
+    display: none;
+}
+
+.shopMessage.visible {
+    display: block;
+}
+
+.shopMessage p {
+    font-size: 1.2em;
+    color: #c0c0c0;
+    margin-bottom: 20px;
+}
+.shopMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+}
+
+.shopMessage.visible {
+    display: block;
+}
+
+.shopMessage p {
+    margin: 0;
+    font-size: 1.2em;
+}

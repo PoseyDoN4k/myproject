@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск артефакта</title>
+    <link rel="stylesheet" href="../styles/locations/artifactSearchMain.css">
+</head>
+<body>
+    <header class="gameHeader">
+        <div class="resourceBar">
+            <span>Золото: <span id="gold">100</span></span>
+            <span>Энергия: <span id="energy">50</span></span>
+        </div>
+        <button class="backToQuests" onclick="window.location.href='./questsMain.html'">Назад к заданиям</button>
+    </header>
+
+    <main class="artifactSearch">
+        <h1>Поиск артефакта</h1>
+        <p>Исследуйте древние руины, чтобы найти могущественный артефакт. Используйте навыки и умения, чтобы преодолеть препятствия и противников.</p>
+
+        <section class="locations">
+            <h2>Локации для поиска</h2>
+            <div class="location" id="ancientLibrary">
+                <h3>Древняя библиотека</h3>
+                <p>Возможно, артефакт спрятан среди старинных книг и магических записей.</p>
+                <button onclick="searchLocation('ancientLibrary')">Искать здесь</button>
+            </div>
+            <div class="location" id="hiddenCave">
+                <h3>Скрытая пещера</h3>
+                <p>Глубокая пещера, где, как говорят, прячутся магические секреты.</p>
+                <button onclick="searchLocation('hiddenCave')">Искать здесь</button>
+            </div>
+            <div class="location" id="ruinedTemple">
+                <h3>Разрушенный храм</h3>
+                <p>Остатки древнего святилища, наполненного загадками и ловушками.</p>
+                <button onclick="searchLocation('ruinedTemple')">Искать здесь</button>
+            </div>
+        </section>
+
+        <div class="searchResult hidden" id="searchResult">
+            <h2 id="resultMessage">Результат поиска</h2>
+            <button onclick="window.location.href='./questsMain.html'">Вернуться к заданиям</button>
+        </div>
+    </main>
+
+    <script src="../scripts/artifactSearchMain.js"></script>
+</body>
+</html>

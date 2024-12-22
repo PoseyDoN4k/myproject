@@ -1,0 +1,113 @@
+/* Основные стили для страницы Главного города */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 600px;
+    height: 100vh;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #1b1b1b, #2f2f2f);
+    color: #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+}
+
+.gameHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(145deg, #4a4a8a, #2e2e6d);
+    box-shadow: 0 6px 15px rgba(92, 92, 255, 0.4);
+    color: white;
+    font-size: 1em;
+}
+
+.resourceBar span {
+    margin-right: 20px;
+}
+
+.mainGame {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #283149;
+}
+
+.location {
+    margin-bottom: 20px;
+}
+
+.location button {
+    display: block;
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(145deg, #6a6ab5, #494984);
+    color: #f4f4f9;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(92, 92, 255, 0.4);
+}
+
+.location button:hover {
+    background: linear-gradient(145deg, #494984, #6a6ab5);
+}
+
+.location-details {
+    display: none;
+    margin-left: 20px;
+}
+
+.location-details button {
+    font-size: 1em;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(145deg, #da0463, #a3034b);
+    color: #fff;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 92, 146, 0.4);
+}
+
+.location-details button:hover {
+    background: linear-gradient(145deg, #c10357, #da0463);
+}
+
+.gameFooter {
+    background: linear-gradient(145deg, #4a4a8a, #2e2e6d);
+    color: #f4f4f9;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.gameFooter a {
+    color: #da0463;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.gameFooter a:hover {
+    text-decoration: underline;
+}

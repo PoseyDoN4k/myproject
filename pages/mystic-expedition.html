@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мистическая экспедиция</title>
+    <link rel="stylesheet" href="../styles/locations/mysticExpedition.css">
+</head>
+<body>
+    <header class="gameHeader">
+        <div class="resourceBar">
+            <span>Золото: <span id="gold">100</span></span>
+            <span>Энергия: <span id="energy">50</span></span>
+        </div>
+        <button class="backToQuests" onclick="window.location.href='./questsMain.html'">Назад к заданиям</button>
+    </header>
+
+    <main class="mysticExpedition">
+        <h1>Мистическая экспедиция</h1>
+        <p>Исследуйте загадочные территории, полные опасностей и сокровищ. Используйте свою смекалку и силы, чтобы преодолеть все преграды.</p>
+
+        <section class="expeditionDetails">
+            <h2>Детали экспедиции</h2>
+            <p>Цель: Добраться до древнего артефакта, спрятанного в сердце мистических земель.</p>
+            <p>Награда: 150 золота, 30 опыта.</p>
+        </section>
+
+        <section class="challenges">
+            <h2>Возможные испытания</h2>
+            <ul>
+                <li>Ловушки: Осторожно обходите скрытые механизмы.</li>
+                <li>Противники: Сражайтесь с охранниками древних земель.</li>
+                <li>Головоломки: Решайте загадки, чтобы продвигаться дальше.</li>
+            </ul>
+        </section>
+
+        <section class="actions">
+            <button id="startExpedition">Начать экспедицию</button>
+        </section>
+
+        <div class="expeditionResult hidden" id="expeditionResult">
+            <h2 id="resultMessage">Результат экспедиции</h2>
+            <button onclick="window.location.href='./questsMain.html'">Вернуться к заданиям</button>
+        </div>
+    </main>
+
+    <script src="../scripts/mysticExpedition.js"></script>
+</body>
+</html>
