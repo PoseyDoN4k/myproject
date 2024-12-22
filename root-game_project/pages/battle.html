@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Битва</title>
+    <link rel="stylesheet" href="../styles/locations/battle.css">
+</head>
+<body>
+    <header class="gameHeader">
+        <div class="resourceBar">
+            <span>Золото: <span id="gold">100</span></span>
+            <span>Энергия: <span id="energy">50</span></span>
+        </div>
+        <button class="backToMain" onclick="window.location.href='./mainGame.html'">Назад в главное меню</button>
+    </header>
+
+    <main class="battle">
+        <h1>Битва с Кровавым Жнецом</h1>
+        
+        <section class="battleInfo">
+            <div class="player">
+                <h2>Ваш персонаж</h2>
+                <ul>
+                    <li><strong>Здоровье:</strong> <span id="playerHealth">1000</span> HP</li>
+                    <li><strong>Атака:</strong> 150-200</li>
+                    <li><strong>Защита:</strong> 50</li>
+                </ul>
+            </div>
+            <div class="enemy">
+                <h2>Кровавый Жнец</h2>
+                <ul>
+                    <li><strong>Здоровье:</strong> <span id="enemyHealth">3000</span> HP</li>
+                    <li><strong>Атака:</strong> 200-250</li>
+                    <li><strong>Особые способности:</strong> Оглушение, яд</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="battleActions">
+            <button id="attackButton">Атака</button>
+            <button id="defendButton">Защита</button>
+            <button id="useItemButton">Использовать предмет</button>
+            <button id="fleeButton">Бегство</button>
+        </section>
+
+        <section class="battleLog">
+            <h2>Журнал битвы</h2>
+            <div id="logMessages">
+                <p>Битва началась! Удачи!</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="../scripts/battle.js"></script>
+</body>
+</html>

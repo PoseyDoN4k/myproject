@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подготовка к битве</title>
+    <link rel="stylesheet" href="../styles/locations/preparation.css">
+</head>
+<body>
+    <header class="gameHeader">
+        <div class="resourceBar">
+            <span>Золото: <span id="gold">100</span></span>
+            <span>Энергия: <span id="energy">50</span></span>
+        </div>
+        <button class="backToMain" onclick="window.location.href='./mainGame.html'">Назад в главное меню</button>
+    </header>
+
+    <main class="preparation">
+        <h1>Подготовка к битве</h1>
+
+        <section class="equipment">
+            <h2>Экипировка</h2>
+            <div class="items">
+                <div class="item">
+                    <p><strong>Оружие:</strong> Меч разрушителя</p>
+                    <button onclick="changeItem('weapon')">Изменить</button>
+                </div>
+                <div class="item">
+                    <p><strong>Броня:</strong> Латы защитника</p>
+                    <button onclick="changeItem('armor')">Изменить</button>
+                </div>
+                <div class="item">
+                    <p><strong>Аксессуары:</strong> Амулет силы</p>
+                    <button onclick="changeItem('accessory')">Изменить</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="consumables">
+            <h2>Расходники</h2>
+            <div class="items">
+                <div class="item">
+                    <p><strong>Зелье здоровья:</strong> Восстанавливает 500 HP</p>
+                    <button onclick="useConsumable('healthPotion')">Использовать</button>
+                </div>
+                <div class="item">
+                    <p><strong>Зелье энергии:</strong> Восстанавливает 50 энергии</p>
+                    <button onclick="useConsumable('energyPotion')">Использовать</button>
+                </div>
+                <div class="item">
+                    <p><strong>Зелье усиления:</strong> Повышает атаку на 10% на 10 минут</p>
+                    <button onclick="useConsumable('boostPotion')">Использовать</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="status">
+            <h2>Характеристики персонажа</h2>
+            <ul>
+                <li><strong>Здоровье:</strong> <span id="characterHealth">1000</span> / 1000</li>
+                <li><strong>Энергия:</strong> <span id="characterEnergy">50</span> / 50</li>
+                <li><strong>Атака:</strong> 150-200</li>
+                <li><strong>Защита:</strong> 50</li>
+            </ul>
+        </section>
+
+        <button class="startBattle" onclick="startBattle()">Начать битву</button>
+    </main>
+
+    <script src="../scripts/preparation.js"></script>
+</body>
+</html>

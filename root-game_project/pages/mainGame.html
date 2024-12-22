@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главный город</title>
+    <link rel="stylesheet" href="../styles/locations/mainGame.css">
+</head>
+<body>
+    <!-- Хедер с ресурсами -->
+    <header class="gameHeader">
+        <div class="resourceBar">
+            <span>Золото: <span id="gold">100</span></span>
+            <span>Энергия: <span id="energy">50</span></span>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="mainGame">
+        <h1>Главный город (База фракции)</h1>
+
+        <section class="location">
+            <button onclick="toggleDetails('tavern')">Таверна</button>
+            <div class="location-details" id="tavern">
+                <button>Набор квестов</button>
+                <button>Информация о прогрессе</button>
+            </div>
+        </section>
+
+        <section class="location">
+            <button onclick="toggleDetails('shops')">Магазины</button>
+            <div class="location-details" id="shops">
+                <button>Экипировка</button>
+                <button>Магазин зелий и расходников</button>
+                <button>Магазин редких товаров</button>
+            </div>
+        </section>
+
+        <section class="location">
+            <button onclick="toggleDetails('forge')">Кузница</button>
+            <div class="location-details" id="forge">
+                <button>Улучшение оружия и брони</button>
+                <button>Заточка снаряжения</button>
+                <button>Крафт предметов</button>
+            </div>
+        </section>
+
+        <section class="location">
+            <button onclick="toggleDetails('arena')">Арена (PvP)</button>
+            <div class="location-details" id="arena">
+                <button>Бой 1v1</button>
+                <button>Групповой бой</button>
+                <button>Турнир недели</button>
+            </div>
+        </section>
+
+        <section class="location">
+            <button onclick="toggleDetails('guild')">Гильдейский зал</button>
+            <div class="location-details" id="guild">
+                <button>Управление гильдией</button>
+                <button>Гильдейные миссии</button>
+                <button>Вклад ресурсов</button>
+            </div>
+        </section>
+
+        <section class="location">
+            <button onclick="toggleDetails('zones')">Открытые зоны</button>
+            <div class="location-details" id="zones">
+                <button>Лес</button>
+                <button>Поле</button>
+                <button>Болото</button>
+            </div>
+        </section>
+
+        <section class="location">
+            <button onclick="toggleDetails('dungeons')">Подземелья</button>
+            <div class="location-details" id="dungeons">
+                <button>Зоны с мобами</button>
+                <button>Босс-зоны</button>
+                <button>Пазлы и ловушки</button>
+            </div>
+        </section>
+
+        <section class="location">
+            <button onclick="toggleDetails('factions')">Локации фракций</button>
+            <div class="location-details" id="factions">
+                <button>Фракционные задания</button>
+                <button>Тренировочные зоны</button>
+                <button>Уникальные торговцы</button>
+            </div>
+        </section>
+
+        <section class="location">
+            <button onclick="toggleDetails('map')">Карта мира</button>
+            <div class="location-details" id="map">
+                <button>Метка персонажа</button>
+                <button>Доступные зоны</button>
+                <button>Активные задания</button>
+            </div>
+        </section>
+
+        <section class="location">
+            <button onclick="toggleDetails('settings')">Настройки</button>
+            <div class="location-details" id="settings">
+                <button>Игра</button>
+                <button>Графика и звук</button>
+                <button>Аккаунт</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="gameFooter">
+        <p>Ещё не зарегистрированы? <a href="./registration.html">Регистрация</a></p>
+    </footer>
+
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+    <script src="/scripts/mainGame.js"></script>
+</body>
+</html>
+

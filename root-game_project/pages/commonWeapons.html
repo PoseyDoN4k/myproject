@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обычное оружие</title>
+    <link rel="stylesheet" href="../styles/locations/commonWeapons.css">
+</head>
+<body>
+    <header class="gameHeader">
+        <div class="resourceBar">
+            <span>Золото: <span id="gold">100</span></span>
+            <span>Энергия: <span id="energy">50</span></span>
+        </div>
+        <button class="backToCategories" onclick="window.location.href='./weapon-shop.html'">Назад к категориям</button>
+    </header>
+
+    <main class="commonWeapons">
+        <h1>Обычное оружие: Комплекты</h1>
+
+        <section class="equipmentSet">
+            <h2>Комплект Копейщика</h2>
+            <p>Этот комплект создан для начинающих воинов. Простое, но эффективное снаряжение для ближнего боя.</p>
+
+            <ul class="equipmentItems">
+                <li>
+                    <strong>Копье Копейщика</strong>
+                    <p>Атака: +50</p>
+                    <p>Цена: 40 золота</p>
+                    <button onclick="buyEquipment('Копье Копейщика', 40)">Купить</button>
+                </li>
+                <li>
+                    <strong>Шлем Копейщика</strong>
+                    <p>Защита: +10</p>
+                    <p>Цена: 20 золота</p>
+                    <button onclick="buyEquipment('Шлем Копейщика', 20)">Купить</button>
+                </li>
+                <li>
+                    <strong>Нагрудник Копейщика</strong>
+                    <p>Защита: +20</p>
+                    <p>Цена: 30 золота</p>
+                    <button onclick="buyEquipment('Нагрудник Копейщика', 30)">Купить</button>
+                </li>
+                <li>
+                    <strong>Перчатки Копейщика</strong>
+                    <p>Ловкость: +5</p>
+                    <p>Цена: 15 золота</p>
+                    <button onclick="buyEquipment('Перчатки Копейщика', 15)">Купить</button>
+                </li>
+                <li>
+                    <strong>Сапоги Копейщика</strong>
+                    <p>Скорость: +5</p>
+                    <p>Цена: 15 золота</p>
+                    <button onclick="buyEquipment('Сапоги Копейщика', 15)">Купить</button>
+                </li>
+                <li>
+                    <strong>Щит Копейщика</strong>
+                    <p>Защита: +15</p>
+                    <p>Цена: 25 золота</p>
+                    <button onclick="buyEquipment('Щит Копейщика', 25)">Купить</button>
+                </li>
+                <li>
+                    <strong>Кольцо Копейщика</strong>
+                    <p>Сила: +5</p>
+                    <p>Цена: 10 золота</p>
+                    <button onclick="buyEquipment('Кольцо Копейщика', 10)">Купить</button>
+                </li>
+                <li>
+                    <strong>Амулет Копейщика</strong>
+                    <p>Выносливость: +10</p>
+                    <p>Цена: 20 золота</p>
+                    <button onclick="buyEquipment('Амулет Копейщика', 20)">Купить</button>
+                </li>
+            </ul>
+        </section>
+
+        <section class="equipmentSet">
+            <h2>Комплект Стрелка</h2>
+            <p>Легкое снаряжение для лучников и разведчиков. Отличный выбор для атаки с расстояния.</p>
+
+            <ul class="equipmentItems">
+                <li>
+                    <strong>Лук Стрелка</strong>
+                    <p>Атака: +40</p>
+                    <p>Цена: 35 золота</p>
+                    <button onclick="buyEquipment('Лук Стрелка', 35)">Купить</button>
+                </li>
+                <li>
+                    <strong>Шлем Стрелка</strong>
+                    <p>Защита: +8</p>
+                    <p>Цена: 18 золота</p>
+                    <button onclick="buyEquipment('Шлем Стрелка', 18)">Купить</button>
+                </li>
+                <li>
+                    <strong>Нагрудник Стрелка</strong>
+                    <p>Защита: +15</p>
+                    <p>Цена: 25 золота</p>
+                    <button onclick="buyEquipment('Нагрудник Стрелка', 25)">Купить</button>
+                </li>
+                <li>
+                    <strong>Перчатки Стрелка</strong>
+                    <p>Меткость: +10</p>
+                    <p>Цена: 12 золота</p>
+                    <button onclick="buyEquipment('Перчатки Стрелка', 12)">Купить</button>
+                </li>
+                <li>
+                    <strong>Сапоги Стрелка</strong>
+                    <p>Скорость: +7</p>
+                    <p>Цена: 18 золота</p>
+                    <button onclick="buyEquipment('Сапоги Стрелка', 18)">Купить</button>
+                </li>
+                <li>
+                    <strong>Кольцо Стрелка</strong>
+                    <p>Сила: +3</p>
+                    <p>Цена: 8 золота</p>
+                    <button onclick="buyEquipment('Кольцо Стрелка', 8)">Купить</button>
+                </li>
+                <li>
+                    <strong>Амулет Стрелка</strong>
+                    <p>Выносливость: +5</p>
+                    <p>Цена: 15 золота</p>
+                    <button onclick="buyEquipment('Амулет Стрелка', 15)">Купить</button>
+                </li>
+                <li>
+                    <strong>Колчан Стрелка</strong>
+                    <p>Скорость атаки: +10%</p>
+                    <p>Цена: 20 золота</p>
+                    <button onclick="buyEquipment('Колчан Стрелка', 20)">Купить</button>
+                </li>
+            </ul>
+        </section>
+
+        <div class="shopMessage hidden" id="shopMessage">
+            <p id="messageText"></p>
+            <button onclick="closeShopMessage()">Закрыть</button>
+        </div>
+    </main>
+
+    <script src="../scripts/commonWeapons.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основные Задания</title>
+    <link rel="stylesheet" href="../styles/locations/questsMain.css">
+</head>
+<body>
+    <header class="gameHeader">
+        <div class="resourceBar">
+            <span>Золото: <span id="gold">100</span></span>
+            <span>Энергия: <span id="energy">50</span></span>
+        </div>
+        <button class="backToMain" onclick="window.location.href='./mainGame.html'">Назад в главное меню</button>
+    </header>
+
+    <main class="questsMain">
+        <h1>Основные Задания</h1>
+        <section class="questsList">
+            <div class="quest">
+                <h2>Защита территории</h2>
+                <p>Обороняйте границы вашей фракции от врагов. Награда: 50 золота, 10 опыта.</p>
+                <button onclick="startQuest('territoryDefense')">Начать</button>
+            </div>
+            <div class="quest">
+                <h2>Поиск артефакта</h2>
+                <p>Исследуйте древние руины в поисках могущественного артефакта. Награда: 100 золота, 20 опыта.</p>
+                <button onclick="startQuest('artifactSearch')">Начать</button>
+            </div>
+            <div class="quest">
+                <h2>Победа над боссом</h2>
+                <p>Сразитесь с могущественным боссом, чтобы спасти фракцию. Награда: 200 золота, 50 опыта.</p>
+                <button onclick="startQuest('bossFight')">Начать</button>
+            </div>
+            <div class="quest">
+                <h2>Мистическая экспедиция</h2>
+                <p>Отправьтесь в опасное путешествие, чтобы открыть тайны мира. Награда: 150 золота, 30 опыта.</p>
+                <button onclick="startQuest('mysticExpedition')">Начать</button>
+            </div>
+            <div class="quest">
+                <h2>Охота на чудовище</h2>
+                <p>Найдите и уничтожьте опасного монстра, угрожающего вашей фракции. Награда: 120 золота, 25 опыта.</p>
+                <button onclick="startQuest('monsterHunt')">Начать</button>
+            </div>
+            <div class="quest">
+                <h2>Секретные исследования</h2>
+                <p>Раскройте тайны древнего мира и соберите уникальные артефакты. Награда: 80 золота, 15 опыта.</p>
+                <button onclick="startQuest('secretResearch')">Начать</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="../scripts/questsMain.js"></script>
+</body>
+</html>

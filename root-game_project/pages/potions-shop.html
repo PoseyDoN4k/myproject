@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин Зелий</title>
+    <link rel="stylesheet" href="../styles/locations/potionsShop.css">
+</head>
+<body>
+    <header class="gameHeader">
+        <div class="resourceBar">
+            <span>Золото: <span id="gold">100</span></span>
+            <span>Энергия: <span id="energy">50</span></span>
+        </div>
+        <button class="backToCategories" onclick="window.location.href='./mainGame.html'">На главную</button>
+    </header>
+
+    <main class="potionsShop">
+        <h1>Магазин Зелий</h1>
+
+        <!-- Секция лечебных зелий -->
+        <section class="potionCategory">
+            <h2>Лечебные Зелья</h2>
+            <ul class="potionItems">
+                <li>
+                    <strong>Малое зелье лечения</strong>
+                    <p>Восстанавливает 50 здоровья</p>
+                    <p>Цена: 10 золота</p>
+                    <button onclick="buyPotion('Малое зелье лечения', 10)">Купить</button>
+                </li>
+                <li>
+                    <strong>Среднее зелье лечения</strong>
+                    <p>Восстанавливает 150 здоровья</p>
+                    <p>Цена: 30 золота</p>
+                    <button onclick="buyPotion('Среднее зелье лечения', 30)">Купить</button>
+                </li>
+                <li>
+                    <strong>Большое зелье лечения</strong>
+                    <p>Восстанавливает 300 здоровья</p>
+                    <p>Цена: 50 золота</p>
+                    <button onclick="buyPotion('Большое зелье лечения', 50)">Купить</button>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Секция зелий энергии -->
+        <section class="potionCategory">
+            <h2>Зелья Энергии</h2>
+            <ul class="potionItems">
+                <li>
+                    <strong>Малое зелье энергии</strong>
+                    <p>Восстанавливает 20 энергии</p>
+                    <p>Цена: 15 золота</p>
+                    <button onclick="buyPotion('Малое зелье энергии', 15)">Купить</button>
+                </li>
+                <li>
+                    <strong>Среднее зелье энергии</strong>
+                    <p>Восстанавливает 50 энергии</p>
+                    <p>Цена: 40 золота</p>
+                    <button onclick="buyPotion('Среднее зелье энергии', 40)">Купить</button>
+                </li>
+                <li>
+                    <strong>Большое зелье энергии</strong>
+                    <p>Восстанавливает 100 энергии</p>
+                    <p>Цена: 70 золота</p>
+                    <button onclick="buyPotion('Большое зелье энергии', 70)">Купить</button>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Секция зелий противоядия -->
+        <section class="potionCategory">
+            <h2>Противоядия</h2>
+            <ul class="potionItems">
+                <li>
+                    <strong>Малое противоядие</strong>
+                    <p>Удаляет слабые яды</p>
+                    <p>Цена: 20 золота</p>
+                    <button onclick="buyPotion('Малое противоядие', 20)">Купить</button>
+                </li>
+                <li>
+                    <strong>Среднее противоядие</strong>
+                    <p>Удаляет средние яды</p>
+                    <p>Цена: 40 золота</p>
+                    <button onclick="buyPotion('Среднее противоядие', 40)">Купить</button>
+                </li>
+                <li>
+                    <strong>Большое противоядие</strong>
+                    <p>Удаляет сильные яды</p>
+                    <p>Цена: 60 золота</p>
+                    <button onclick="buyPotion('Большое противоядие', 60)">Купить</button>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Секция редких зелий -->
+        <section class="potionCategory">
+            <h2>Редкие Зелья</h2>
+            <ul class="potionItems">
+                <li>
+                    <strong>Зелье невидимости</strong>
+                    <p>Делает вас невидимым на 10 секунд</p>
+                    <p>Цена: 100 золота</p>
+                    <button onclick="buyPotion('Зелье невидимости', 100)">Купить</button>
+                </li>
+                <li>
+                    <strong>Зелье скорости</strong>
+                    <p>Увеличивает скорость передвижения на 30% в течение 10 секунд</p>
+                    <p>Цена: 80 золота</p>
+                    <button onclick="buyPotion('Зелье скорости', 80)">Купить</button>
+                </li>
+                <li>
+                    <strong>Зелье силы</strong>
+                    <p>Увеличивает силу атаки на 20% в течение 10 секунд</p>
+                    <p>Цена: 90 золота</p>
+                    <button onclick="buyPotion('Зелье силы', 90)">Купить</button>
+                </li>
+            </ul>
+        </section>
+
+        <div class="shopMessage hidden" id="shopMessage">
+            <p id="messageText"></p>
+            <button onclick="closeShopMessage()">Закрыть</button>
+        </div>
+    </main>
+
+    <script src="../scripts/potionsShop.js"></script>
+</body>
+</html>

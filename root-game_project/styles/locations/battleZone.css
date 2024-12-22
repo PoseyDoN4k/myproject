@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 600px; /* Установлена ширина экрана игры */
+    height: 100vh;
+    margin: 0 auto; /* Центрирование по горизонтали */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(135deg, #1b1b1b, #2f2f2f); /* Градиент темного фона */
+    color: #e8e8e8; /* Светлый цвет текста */
+    overflow-x: hidden; /* Убираем горизонтальный скроллинг */
+    overflow-y: hidden; /* Убираем вертикальный скроллинг */
+    border: 3px solid #5c5cff; /* Синяя обводка */
+}
+
+.gameHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(145deg, #4a4a8a, #2e2e6d); /* Градиент хедера */
+    box-shadow: 0 4px 10px rgba(92, 92, 255, 0.4);
+    color: white;
+    font-size: 1em;
+    border-bottom: 3px solid #5c5cff; /* Обводка снизу */
+}
+
+.resourceBar span {
+    margin-right: 20px;
+    font-weight: bold;
+    color: #e8e8e8;
+    text-shadow: 0px 0px 5px #9dafff;
+}
+
+.logoutButton {
+    background: linear-gradient(145deg, #6a6ab5, #494984); /* Градиент кнопки */
+    color: white;
+    font-size: 1em;
+    border: 2px solid #9dafff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(92, 92, 255, 0.4);
+}
+
+.logoutButton:hover {
+    background: linear-gradient(145deg, #494984, #6a6ab5);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(157, 175, 255, 0.5);
+}
+
+.battleZone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.battleZone h1 {
+    color: #9dafff;
+    font-size: 2em;
+    text-shadow: 0px 0px 10px #9dafff;
+    margin-bottom: 20px;
+}
+
+.battle {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 90%;
+    max-width: 600px;
+}
+
+.enemy {
+    background: linear-gradient(145deg, #34346a, #2a2a57); /* Градиент для врага */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(92, 92, 255, 0.5);
+    color: #e8e8e8;
+    flex: 1;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #9dafff;
+}
+
+.enemy:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(92, 92, 255, 0.6);
+}
+
+.playerActions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.playerActions button {
+    background: linear-gradient(145deg, #4a4a8a, #2e2e6d); /* Градиент кнопок */
+    color: white;
+    font-size: 1em;
+    border: 2px solid #9dafff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(92, 92, 255, 0.4);
+}
+
+.playerActions button:hover {
+    background: linear-gradient(145deg, #2e2e6d, #4a4a8a);
+    transform: scale(1.05);
+}
+
+.battleLog {
+    width: 90%;
+    max-width: 600px;
+    background: linear-gradient(145deg, #1b1b1b, #2f2f2f); /* Градиент лога */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(92, 92, 255, 0.5);
+    color: #e8e8e8;
+    overflow-y: auto;
+    max-height: calc(100vh - 300px); /* Зависимость от оставшегося места */
+    flex-grow: 1;
+    border: 2px solid #9dafff;
+}
+
+.battleLog h2 {
+    color: #9dafff;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 5px #9dafff;
+}
+
+#logContainer {
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.victoryMessage {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(145deg, #494984, #6a6ab5); /* Градиент сообщения о победе */
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(92, 92, 255, 0.7);
+    text-align: center;
+    z-index: 10;
+    width: 80%;
+    max-width: 500px;
+    border: 2px solid #9dafff;
+}
+
+.victoryMessage h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 5px #e8e8e8;
+}
+
+.victoryMessage p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.victoryMessage button {
+    background: linear-gradient(145deg, #6a6ab5, #494984); /* Градиент кнопки */
+    color: white;
+    font-size: 1em;
+    border: 2px solid #9dafff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(92, 92, 255, 0.4);
+}
+
+.victoryMessage button:hover {
+    background: linear-gradient(145deg, #494984, #6a6ab5);
+    transform: scale(1.1);
+}
+
+.completedQuest {
+    color: #999;
+    background: #333;
+    border: 2px solid #555;
+}
+
+.playerStats {
+    background: linear-gradient(145deg, #2f2f5f, #3f3f6f); /* Градиент характеристик */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(92, 92, 255, 0.5);
+    color: #e8e8e8;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 600px;
+    border: 2px solid #9dafff;
+}
+
+.playerStats h2 {
+    color: #9dafff;
+    margin-bottom: 10px;
+}
+
+.playerStats p {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
