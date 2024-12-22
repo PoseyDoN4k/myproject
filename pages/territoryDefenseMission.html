@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выполнение миссии: Защита территории</title>
+    <link rel="stylesheet" href="../styles/locations/territoryDefenseMission.css">
+</head>
+<body>
+    <header class="gameHeader">
+        <div class="resourceBar">
+            <span>Золото: <span id="gold">100</span></span>
+            <span>Энергия: <span id="energy">50</span></span>
+        </div>
+        <button class="backToQuests" onclick="window.location.href='./questsMain.html'">Назад к заданиям</button>
+    </header>
+
+    <main class="missionExecution">
+        <h1>Миссия: Защита территории</h1>
+
+        <section class="waveDetails">
+            <h2>Противники</h2>
+            <p>Первая волна: Маленькие враги (5 шт.)</p>
+            <p>Вторая волна: Средние враги (3 шт.)</p>
+            <p>Третья волна: Большой босс</p>
+        </section>
+
+        <section class="missionProgress">
+            <h2>Прогресс</h2>
+            <p>Текущая волна: <span id="currentWave">1</span> / 3</p>
+            <p>Осталось врагов: <span id="remainingEnemies">5</span></p>
+        </section>
+
+        <section class="stats">
+            <div class="playerStats">
+                <h2>Параметры игрока</h2>
+                <p>HP: <span id="playerHP">200</span></p>
+                <p>Attack: <span id="playerAttack">30</span></p>
+                <p>Defense: <span id="playerDefense">10</span></p>
+            </div>
+            <div class="enemyStats">
+                <h2>Параметры врага</h2>
+                <p>Имя: <span id="enemyName">Маленький враг</span></p>
+                <p>HP: <span id="enemyHP">50</span></p>
+                <p>Defense: <span id="enemyDefense">5</span></p>
+                <p>Attack: <span id="enemyAttack">10</span></p>
+            </div>
+        </section>
+
+        <section class="actions">
+            <button id="attackEnemy">Атаковать врага</button>
+            <button id="usePotion">Использовать зелье</button>
+        </section>
+
+        <div class="missionResult hidden" id="missionResult">
+            <h2 id="resultMessage">Миссия завершена!</h2>
+            <button onclick="window.location.href='./questsMain.html'">Вернуться к заданиям</button>
+        </div>
+    </main>
+
+    <script src="../scripts/territoryDefenseMission.js"></script>
+</body>
+</html>

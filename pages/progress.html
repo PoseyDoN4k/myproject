@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогресс персонажа</title>
+    <link rel="stylesheet" href="../styles/locations/progress.css">
+</head>
+<body>
+    <header class="gameHeader">
+        <div class="resourceBar">
+            <span>Золото: <span id="gold">100</span></span>
+            <span>Энергия: <span id="energy">50</span></span>
+        </div>
+        <button class="backToMain" onclick="window.location.href='./mainGame.html'">Назад в главное меню</button>
+    </header>
+
+    <main class="progress">
+        <h1>Прогресс персонажа</h1>
+
+        <section class="levelProgress">
+            <h2>Уровень</h2>
+            <p>Текущий уровень: <strong><span id="currentLevel">1</span></strong></p>
+            <div class="progressBar">
+                <div class="progress" id="xpBar" style="width: 20%;"></div>
+            </div>
+            <p>Опыт: <span id="currentXP">20</span> / <span id="nextLevelXP">100</span></p>
+        </section>
+
+        <section class="questsProgress">
+            <h2>Задания</h2>
+            <ul id="completedQuests">
+                <!-- Список выполненных заданий будет динамически загружен -->
+            </ul>
+        </section>
+
+        <section class="achievements">
+            <h2>Достижения</h2>
+            <ul id="achievementsList">
+                <li>Первое задание: <span class="achievementStatus">✔</span></li>
+                <li>Победа над первым боссом: <span class="achievementStatus">❌</span></li>
+                <li>10 завершённых квестов: <span class="achievementStatus">❌</span></li>
+            </ul>
+        </section>
+
+        <section class="stats">
+            <h2>Характеристики</h2>
+            <ul>
+                <li>Сила: <span id="statStrength">10</span></li>
+                <li>Ловкость: <span id="statAgility">8</span></li>
+                <li>Интеллект: <span id="statIntelligence">12</span></li>
+                <li>Выносливость: <span id="statStamina">15</span></li>
+            </ul>
+        </section>
+
+        <section class="skills">
+            <h2>Умения</h2>
+            <ul id="skillsList">
+                <li>Мощный удар (уровень 1)</li>
+                <li>Огненный шар (уровень 1)</li>
+                <li>Ловушка (уровень 1)</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="../scripts/progress.js"></script>
+</body>
+</html>

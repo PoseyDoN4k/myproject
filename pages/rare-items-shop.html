@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин Редких Товаров</title>
+    <link rel="stylesheet" href="../styles/locations/rareItemsShop.css">
+</head>
+<body>
+    <header class="gameHeader">
+        <div class="resourceBar">
+            <span>Золото: <span id="gold">100</span></span>
+            <span>Энергия: <span id="energy">50</span></span>
+        </div>
+        <button class="backToCategories" onclick="window.location.href='./mainGame.html'">На главную</button>
+    </header>
+
+    <main class="rareItemsShop">
+        <h1>Магазин Редких Товаров</h1>
+
+        <section class="rareItems">
+            <ul class="itemList">
+                <li>
+                    <strong>Древний Амулет</strong>
+                    <p>Увеличивает магическую силу на 20%</p>
+                    <p>Цена: 200 золота</p>
+                    <button onclick="buyItem('Древний Амулет', 200)">Купить</button>
+                </li>
+                <li>
+                    <strong>Кристалл Воскрешения</strong>
+                    <p>Позволяет вернуться к жизни один раз</p>
+                    <p>Цена: 500 золота</p>
+                    <button onclick="buyItem('Кристалл Воскрешения', 500)">Купить</button>
+                </li>
+                <li>
+                    <strong>Кольцо Бесконечной Маны</strong>
+                    <p>Постепенно восстанавливает ману</p>
+                    <p>Цена: 300 золота</p>
+                    <button onclick="buyItem('Кольцо Бесконечной Маны', 300)">Купить</button>
+                </li>
+                <li>
+                    <strong>Эссенция Скорости</strong>
+                    <p>Увеличивает скорость на 40% в течение 15 секунд</p>
+                    <p>Цена: 150 золота</p>
+                    <button onclick="buyItem('Эссенция Скорости', 150)">Купить</button>
+                </li>
+                <li>
+                    <strong>Свиток Защиты</strong>
+                    <p>Создает щит, блокирующий 50 урона</p>
+                    <p>Цена: 120 золота</p>
+                    <button onclick="buyItem('Свиток Защиты', 120)">Купить</button>
+                </li>
+                <li>
+                    <strong>Лунный Камень</strong>
+                    <p>Увеличивает сопротивление магии на 25%</p>
+                    <p>Цена: 250 золота</p>
+                    <button onclick="buyItem('Лунный Камень', 250)">Купить</button>
+                </li>
+                <li>
+                    <strong>Пыль Феникса</strong>
+                    <p>Восстанавливает 100 здоровья мгновенно</p>
+                    <p>Цена: 100 золота</p>
+                    <button onclick="buyItem('Пыль Феникса', 100)">Купить</button>
+                </li>
+                <li>
+                    <strong>Эликсир Ярости</strong>
+                    <p>Увеличивает атаку на 30% в течение 10 секунд</p>
+                    <p>Цена: 180 золота</p>
+                    <button onclick="buyItem('Эликсир Ярости', 180)">Купить</button>
+                </li>
+                <li>
+                    <strong>Коготь Дракона</strong>
+                    <p>Увеличивает критический урон на 50%</p>
+                    <p>Цена: 400 золота</p>
+                    <button onclick="buyItem('Коготь Дракона', 400)">Купить</button>
+                </li>
+                <li>
+                    <strong>Осколок Света</strong>
+                    <p>Восстанавливает 50 маны мгновенно</p>
+                    <p>Цена: 90 золота</p>
+                    <button onclick="buyItem('Осколок Света', 90)">Купить</button>
+                </li>
+            </ul>
+        </section>
+
+        <div class="shopMessage hidden" id="shopMessage">
+            <p id="messageText"></p>
+            <button onclick="closeShopMessage()">Закрыть</button>
+        </div>
+    </main>
+
+    <script src="../scripts/rareItemsShop.js"></script>
+</body>
+</html>

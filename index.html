@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вкус Ночи</title>
+    <link rel="stylesheet" href="./styles/locations/authorization.css">
+</head>
+<body>
+    <main class="mainBlock">
+        <button id="startGame">Начать</button>
+        <form class="formAuthorization" action="/login" method="POST">
+            <h1>Уже есть аккаунт?</h1>
+            <input class="loginUser" type="text" name="username" placeholder="Логин" required>
+            <input class="passUser" type="password" name="password" placeholder="Пароль" required>
+            <div class="checkboxWrapper">
+                <input id="checkboxRules" type="checkbox" required>
+                <label for="checkboxRules">Я прочитал политику</label>
+            </div>
+            <button class="buttonAuthorization" type="submit">Войти</button>
+        </form>
+    </main>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
